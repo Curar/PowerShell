@@ -1,0 +1,1 @@
+Get-ChildItem -Path "C:\folders_name\" -Directory -recurse | where {$_.LastWriteTime -le $(Get-date).Adddays(-7)} | Remove-Item -recurse -force
